@@ -24,5 +24,22 @@ namespace BiPapyon.Api.WebApi.Controllers
 
             return Ok(new ApiResponseDTO { Result = res });
         }
+
+        [HttpPost]
+        public async Task<IActionResult> Create([FromBody] CreateUserCommand command)
+        {
+            var res = await _mediator.Send(command);
+
+            return Ok(new ApiResponseDTO { Result = res });
+        }
+
+        [HttpPost]
+        [Route("update")]
+        public async Task<IActionResult> Update([FromBody] UpdateUserCommand command)
+        {
+            var res = await _mediator.Send(command);
+
+            return Ok(new ApiResponseDTO { Result = res });
+        }
     }
 }

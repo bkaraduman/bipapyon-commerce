@@ -19,4 +19,11 @@
         Unauthorized = 401,
         Forbid = 403
     }
+
+    public enum DatabaseStatus : int
+    {
+        Passive = 0,
+        Active = 1,
+        Deleted = 2
+    }
 }

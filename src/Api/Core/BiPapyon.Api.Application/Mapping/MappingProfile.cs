@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using BiPapyon.Api.Domain.Models;
 using BiPapyon.Common.Models.Queries;
+using BiPapyon.Common.Models.RequestModels;
 
 namespace BiPapyon.Api.Application.Mapping
 {
@@ -10,6 +11,9 @@ namespace BiPapyon.Api.Application.Mapping
         {
             CreateMap<User, LoginUserViewModel>()
                 .ReverseMap();
+
+            CreateMap<CreateUserCommand, User>();
+            CreateMap<UpdateUserCommand, User>();
         }
     }
 }

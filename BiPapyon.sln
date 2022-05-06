@@ -21,19 +21,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApi", "WebApi", "{23D8A9
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebUI", "WebUI", "{4A0AC10F-94C8-470C-AD4E-9EE890882F94}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiPapyon.Common", "src\Common\BiPapyon.Common\BiPapyon.Common.csproj", "{EE7596D1-C9ED-442B-BC5C-9B4A17C43BAE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BiPapyon.Common", "src\Common\BiPapyon.Common\BiPapyon.Common.csproj", "{EE7596D1-C9ED-442B-BC5C-9B4A17C43BAE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiPapyon.Api.Domain", "src\Api\Core\BiPapyon.Api.Domain\BiPapyon.Api.Domain.csproj", "{CFEB7D2A-C0A4-496E-8E04-4766FCEE4311}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BiPapyon.Api.Domain", "src\Api\Core\BiPapyon.Api.Domain\BiPapyon.Api.Domain.csproj", "{CFEB7D2A-C0A4-496E-8E04-4766FCEE4311}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiPapyon.Api.Application", "src\Api\Core\BiPapyon.Api.Application\BiPapyon.Api.Application.csproj", "{30745FCD-F2D6-4860-8D43-73DC74033129}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BiPapyon.Api.Application", "src\Api\Core\BiPapyon.Api.Application\BiPapyon.Api.Application.csproj", "{30745FCD-F2D6-4860-8D43-73DC74033129}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiPapyon.Infrastructure.Persistence", "src\Api\Infrastructure\BiPapyon.Infrastructure.Persistence\BiPapyon.Infrastructure.Persistence.csproj", "{30CE8BA8-4EDE-4641-A01F-AE6E10DA7B3D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BiPapyon.Infrastructure.Persistence", "src\Api\Infrastructure\BiPapyon.Infrastructure.Persistence\BiPapyon.Infrastructure.Persistence.csproj", "{30CE8BA8-4EDE-4641-A01F-AE6E10DA7B3D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiPapyon.Api.WebApi", "src\Api\WebApi\BiPapyon.Api.WebApi\BiPapyon.Api.WebApi.csproj", "{B031E93C-3273-486F-9260-68870AEBBA6D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BiPapyon.Api.WebApi", "src\Api\WebApi\BiPapyon.Api.WebApi\BiPapyon.Api.WebApi.csproj", "{B031E93C-3273-486F-9260-68870AEBBA6D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiPapyon.Projections.FavoriteService", "src\Projections\BiPapyon.Projections.FavoriteService\BiPapyon.Projections.FavoriteService.csproj", "{C529C1FC-6DE4-41EC-94AC-444102B0B707}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BiPapyon.Projections.FavoriteService", "src\Projections\BiPapyon.Projections.FavoriteService\BiPapyon.Projections.FavoriteService.csproj", "{C529C1FC-6DE4-41EC-94AC-444102B0B707}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiPapyon.WebApp", "src\Clients\WebUI\BiPapyon.WebApp\BiPapyon.WebApp.csproj", "{13F23816-6155-4EC4-B5D3-393BA005F06D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BiPapyon.WebApp", "src\Clients\WebUI\BiPapyon.WebApp\BiPapyon.WebApp.csproj", "{13F23816-6155-4EC4-B5D3-393BA005F06D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiPapyon.Projection.UserService", "src\Projections\BiPapyon.Projection.UserService\BiPapyon.Projection.UserService.csproj", "{53519276-E028-49D6-B4BA-EA4685E5A628}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{13F23816-6155-4EC4-B5D3-393BA005F06D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13F23816-6155-4EC4-B5D3-393BA005F06D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13F23816-6155-4EC4-B5D3-393BA005F06D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53519276-E028-49D6-B4BA-EA4685E5A628}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53519276-E028-49D6-B4BA-EA4685E5A628}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53519276-E028-49D6-B4BA-EA4685E5A628}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53519276-E028-49D6-B4BA-EA4685E5A628}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -89,6 +95,7 @@ Global
 		{B031E93C-3273-486F-9260-68870AEBBA6D} = {23D8A9A4-2ADC-46D2-AB32-FBAAD3664B36}
 		{C529C1FC-6DE4-41EC-94AC-444102B0B707} = {8BE24BA7-A8C5-4583-8913-56BC05BCE280}
 		{13F23816-6155-4EC4-B5D3-393BA005F06D} = {4A0AC10F-94C8-470C-AD4E-9EE890882F94}
+		{53519276-E028-49D6-B4BA-EA4685E5A628} = {8BE24BA7-A8C5-4583-8913-56BC05BCE280}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D792839C-61DC-4F27-A163-826E63B84A8E}
