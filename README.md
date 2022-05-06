@@ -35,5 +35,6 @@ The goal is developing clean, maintainable & testable architecture!
 * Swagger
 * RabbitMQ
 * Mediatr & CQRS for .net core
+* .Net core xunit Testing
 
 This is going to be great! Keep in touch. I am going to update repo often. Thanks for reading. Have a great day!
