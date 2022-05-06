@@ -64,9 +64,6 @@ namespace BiPapyon.Infrastructure.Persistence.Context
 
             await context.Products.AddRangeAsync(entries);
 
-
-
-
             await context.SaveChangesAsync();
         }
     }

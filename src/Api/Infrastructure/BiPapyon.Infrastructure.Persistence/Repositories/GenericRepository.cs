@@ -13,11 +13,11 @@ namespace BiPapyon.Infrastructure.Persistence.Repositories
 {
     public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
     {
-        private readonly BiPapyonContext dbContext;
+        private readonly DbContext dbContext;
 
         protected DbSet<T> entity => dbContext.Set<T>();
 
-        public GenericRepository(BiPapyonContext context)
+        public GenericRepository(DbContext context)
         {
             this.dbContext = context ?? throw new ArgumentNullException(nameof(context));
         }
@@ -127,14 +127,14 @@ namespace BiPapyon.Infrastructure.Persistence.Repositories
 
         public virtual bool DeleteRange(Expression<Func<T, bool>> predicate)
         {
-            dbContext.RemoveRange(predicate);
+            dbContext.RemoveRange(entity.Where(predicate));
 
             return dbContext.SaveChanges() > 0;
         }
 
         public virtual async Task<bool> DeleteRangeAsync(Expression<Func<T, bool>> predicate)
         {
-            dbContext.RemoveRange(predicate);
+            dbContext.RemoveRange(entity.Where(predicate));
 
             return await dbContext.SaveChangesAsync() > 0;
         }
@@ -251,6 +251,7 @@ namespace BiPapyon.Infrastructure.Persistence.Repositories
 
         #endregion
 
+        #region Bulk
 
 
         public virtual Task BulkAdd(IEnumerable<T> entities)
@@ -269,7 +270,7 @@ namespace BiPapyon.Infrastructure.Persistence.Repositories
         public virtual Task BulkDelete(Expression<Func<T, bool>> entities)
         {
             IQueryable<T> query = entity;
-            
+
             if (entities != null)
             {
                 query = entity.Where(entities);
@@ -302,6 +303,8 @@ namespace BiPapyon.Infrastructure.Persistence.Repositories
             throw new NotImplementedException();
         }
 
+        #endregion
+        
         private static IQueryable<T> ApplyIncludes(IQueryable<T> query, Expression<Func<T, object>>[] includes)
         {
             if (includes != null)
